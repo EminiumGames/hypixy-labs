@@ -1,0 +1,400 @@
+/* Reset minimal et base typographique */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050608;
+  color: #f5f5f7;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout global */
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 2.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-brand img {
+  height: 32px;
+  width: auto;
+}
+
+.nav-brand span {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #f9fafb;
+}
+
+nav a.active {
+  color: #f9fafb;
+}
+
+/* Bouton minimal */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(156, 163, 175, 0.35);
+  color: #f9fafb;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 60%);
+  backdrop-filter: blur(10px);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  border-color: rgba(250, 250, 250, 0.7);
+  background: radial-gradient(circle at top left, rgba(96,165,250,0.3), rgba(15,23,42,0.95));
+  transform: translateY(-1px);
+}
+
+/* Sections */
+
+main {
+  margin-top: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #9ca3af;
+  max-width: 34rem;
+  font-size: 0.98rem;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.hero-title span.accent {
+  background: linear-gradient(120deg, #60a5fa, #a855f7, #f97316);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  color: #9ca3af;
+  max-width: 32rem;
+  margin-top: 0.85rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  align-items: center;
+}
+
+.hero-badge {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6b7280;
+}
+
+.hero-metric {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Cards génériques */
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  background: radial-gradient(circle at top left, rgba(15,118,110,0.16), rgba(15,23,42,1));
+  padding: 1.25rem 1.35rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-header img {
+  height: 32px;
+  width: 32px;
+  border-radius: 0.6rem;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card-tagline {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.card-body {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.card-meta {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.card-link {
+  font-size: 0.85rem;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Grilles spécifiques */
+
+.features-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.feature-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Page Équipe */
+
+.team-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  background: radial-gradient(circle at top right, rgba(56,189,248,0.16), rgba(15,23,42,1));
+}
+
+.team-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 0.9rem;
+  object-fit: cover;
+}
+
+.team-info-main {
+  flex: 1;
+}
+
+.team-name {
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.team-role {
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+.team-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6b7280;
+}
+
+/* Page créations */
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.status-live {
+  color: #4ade80;
+}
+
+.status-dev {
+  color: #facc15;
+}
+
+.status-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+/* Page légale */
+
+.legal-block {
+  margin-bottom: 1.5rem;
+}
+
+.legal-block h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-block p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+/* Responsive */
+
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .card-grid.projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .wrapper {
+    padding-inline: 1.1rem;
+  }
+}
